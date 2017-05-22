@@ -72,8 +72,8 @@
                android:layout_below="@id/imgMovie"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-                android:layout_alignStart="@id/imgMovie"
-               android:layout_alignEnd="@id/ll2"
+                android:layout_alignLeft="@id/imgMovie"
+               android:layout_alignRight="@id/ll2"
                android:textSize="15sp"
                android:text="ini adalah jalan cerita dari movie di atas , isilah selengkap mungkin atau berdasarkan hasil "/>
 

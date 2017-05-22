@@ -1,6 +1,8 @@
 package com.movieson.www.movieson.activity;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
@@ -25,10 +27,33 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        MovieFragment movieFragment = (MovieFragment)fragmentManager.findFragmentById(R.id.fragmentMovie);
+        MovieFragment movieFragment = (MovieFragment) fragmentManager.findFragmentById(R.id.fragmentMovie);
 
+        if (movieFragment == null) {
+            movieFragment = MovieFragment.newInstance("serah", "bebas");
+            fragmentManager.beginTransaction().add(R.id.fragmentMovie, movieFragment).commit();
+        }
+/*        BottomNavigationView bottomNavigationView = (BottomNavigationView)
+                findViewById(R.id.bottom_navigation);
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.action_favorites:
+
+                            case R.id.action_schedules:
+
+                            case R.id.action_music:
+
+                        }
+                        return true;
+                    }
+                });
+    */
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -50,4 +75,8 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
 }
