@@ -24,7 +24,7 @@ public class MovieList {
         this.title = title;
     }
 
-    public MovieList    (String posterPath, String title, String releaseDate,  String voteAverage, String overview, String id) {
+    public MovieList(String posterPath, String title, String releaseDate,  String voteAverage, String overview, String id) {
         this.posterPath = posterPath;
         this.title = title;
         this.releaseDate = releaseDate;

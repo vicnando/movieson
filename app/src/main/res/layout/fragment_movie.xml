@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.movieson.www.movieson.fragment.MovieFragment">
 
 <RelativeLayout
@@ -15,29 +16,36 @@
         android:layout_margin="5dp"
         android:id="@+id/ll1">
 
-        <Button
+        <ImageButton
+            android:id="@+id/prev"
             android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent"
-            android:textSize="30sp"
-            android:textColor="#ffffff"
-            android:text="<"/>
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:text="1"
+            android:layout_height="40dp"
+            android:background="@drawable/prev"
             android:textSize="20sp"
-            android:background="#ffffff"/>
-
-        <Button
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent"
-            android:textSize="30sp"
             android:textColor="#ffffff"
-            android:text=">"/>
+            android:text="Prev"/>
+
+        <Spinner
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            android:id="@+id/etpagenav"
+            android:layout_width="60dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:background="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/next"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:text="Next"/>
 
 
     </LinearLayout>
@@ -50,13 +58,6 @@
         android:background="#aaaaaa">
 
     </android.support.v7.widget.RecyclerView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="No Data"/>
 
 </RelativeLayout>
 

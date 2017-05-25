@@ -1,5 +1,9 @@
 package com.movieson.www.movieson.models;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by microsoft on 5/22/2017.
  */
@@ -43,9 +47,6 @@ public class Movie {
         return releaseDate;
     }
 
-    public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
-    }
 
     public int getRuntime() {
         return runtime;
@@ -79,7 +80,14 @@ public class Movie {
         this.trailer = trailer;
     }
 
+    public void setReleaseDate(String releaseDate) {
 
+        this.releaseDate = releaseDate;
+    }
+
+    public Movie(String trailer) {
+        this.trailer = trailer;
+    }
 
 
 }

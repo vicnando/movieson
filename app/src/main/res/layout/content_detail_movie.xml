@@ -1,119 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.movieson.www.movieson.activity.DetailMovieActivity"
-    tools:showIn="@layout/activity_detail_movie"
-    android:fillViewport="true"
-    >
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.movieson.www.movieson.activity.DetailMovieActivity"
+    tools:showIn="@layout/activity_detail_movie"
+    android:id="@+id/ll"
+    android:background="#000000"
+   >
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
-        android:background="@color/colorAccent">
-        <TextView
-            android:paddingTop="30dp"
-            android:paddingBottom="30dp"
-            android:paddingLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="title_movie"
-            android:textColor="#ffffff"
-            android:textSize="30sp"
-            android:layout_centerVertical="true" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="130dp"
-            android:layout_height="170dp"
-            android:layout_margin="20dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:id="@+id/imgMovie"
-            android:background="@color/colorPrimaryDark"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_margin="20dp"
-            android:id="@+id/ll2">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
-           <TextView
-               android:id="@+id/tvsynopsis"
-               android:layout_below="@id/imgMovie"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/imgMovie"
-               android:layout_alignRight="@id/ll2"
-               android:textSize="15sp"
-               android:text="ini adalah jalan cerita dari movie di atas , isilah selengkap mungkin atau berdasarkan hasil "/>
-
-        <View
-            android:id="@+id/line"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/colorAccent"
-            android:layout_margin="10dp"
-            android:layout_below="@id/tvsynopsis"
-            />
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:background="#9c3f4243"
+           >
 
-        <TextView
-            android:id="@+id/trailer"
-            android:layout_below="@id/line"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/imgMovie"
-            android:text="Trailer :"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+               >
 
-        <android.support.v7.widget.RecyclerView
-            android:layout_alignLeft="@id/imgMovie"
-            android:layout_alignRight="@id/ll2"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/trailer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp"
+                    android:textStyle="bold"
+                    android:text="title_movie (Tahun)"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp"
+                    android:id="@+id/tvtitle"/>
 
 
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgMovie"
+                        android:layout_width="135dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="20dp"
+                        android:padding="2dp"
+                        android:background="#ffffff" />
+
+                    <LinearLayout
+                        android:id="@+id/ll2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/imgMovie"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duration :"
+                            android:textColor="#ffffff"
+                            android:textSize="25sp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duration"
+                            android:id="@+id/tvduration"
+                            android:textSize="25sp"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="#ffffff"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rating :"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="rating"
+                            android:textColor="#ffffff"
+                            android:id="@+id/tvrating"
+
+                            android:textSize="20sp"/>
 
 
-    </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvoverview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/imgMovie"
+
+                        android:layout_marginRight="20dp"
+                        android:textColor="#ffffff"
+                        android:layout_below="@id/imgMovie"
+                        android:text="ini adalah jalan cerita dari movie di atas , isilah selengkap mungkin atau berdasarkan hasil "
+                        android:textSize="15sp" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tvoverview"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/trailer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/imgMovie"
+                        android:layout_below="@id/line"
+                        android:text="Trailer :"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/imgMovie"
+                        android:layout_alignRight="@id/ll2"
+                        android:layout_below="@id/trailer"
+                        android:layout_marginTop="10dp">
+
+                    </android.support.v7.widget.RecyclerView>
 
 
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
 
 </LinearLayout>
-
-</ScrollView>
