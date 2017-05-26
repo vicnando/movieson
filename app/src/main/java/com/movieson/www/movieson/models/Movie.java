@@ -9,22 +9,24 @@ import java.util.Date;
  */
 
 public class Movie {
+    private  String movieid;
     private String title;
     private String posterPath;
     private String releaseDate;
     private int runtime;
     private String voteAverage;
     private String overview;
-    private String trailer;
 
-    public Movie(String title, String posterPath, String releaseDate, int runtime, String voteAverage, String overview, String trailer) {
+    public Movie(String movieid, String title, String posterPath, String releaseDate, int runtime,
+                 String voteAverage, String overview) {
+        this.movieid = movieid;
         this.title = title;
         this.posterPath = posterPath;
         this.releaseDate = releaseDate;
         this.runtime = runtime;
         this.voteAverage = voteAverage;
         this.overview = overview;
-        this.trailer = trailer;
+
     }
 
     public String getTitle() {
@@ -72,22 +74,13 @@ public class Movie {
         this.overview = overview;
     }
 
-    public String getTrailer() {
-        return trailer;
-    }
 
-    public void setTrailer(String trailer) {
-        this.trailer = trailer;
-    }
 
     public void setReleaseDate(String releaseDate) {
 
         this.releaseDate = releaseDate;
     }
 
-    public Movie(String trailer) {
-        this.trailer = trailer;
-    }
 
 
 }

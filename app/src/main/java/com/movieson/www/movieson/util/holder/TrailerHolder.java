@@ -27,7 +27,8 @@ public class TrailerHolder extends RecyclerView.ViewHolder {
 
 
     public void updateUI(int i){
-        trailer.setText("Trailer" + String.valueOf(i));
+        int j = i +1;
+        trailer.setText("Trailer" + String.valueOf(" "+j));
     }
 
 }

@@ -17,8 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:background="#9c3f4243"
-           >
+            android:background="#9c3f4243">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -97,6 +96,13 @@
 
                             android:textSize="20sp"/>
 
+                        <Button
+                            android:id="@+id/btnfav"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mark As Favorite"/>
+
 
 
                     </LinearLayout>
@@ -119,7 +125,7 @@
                         android:layout_height="1dp"
                         android:layout_below="@id/tvoverview"
                         android:layout_margin="10dp"
-                        android:background="@color/colorAccent" />
+                        android:background="#ffffff" />
 
                     <TextView
                         android:id="@+id/trailer"
@@ -142,6 +148,37 @@
                         android:layout_marginTop="10dp">
 
                     </android.support.v7.widget.RecyclerView>
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/rv"
+                        android:layout_margin="10dp"
+                        android:background="#ffffff"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvrev"
+                        android:layout_below="@id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Reviews: "
+                        android:layout_alignLeft="@id/imgMovie"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_below="@id/tvrev"
+                        android:layout_marginTop="10dp">
+
+                    </android.support.v7.widget.RecyclerView>
+
 
 
                 </RelativeLayout>

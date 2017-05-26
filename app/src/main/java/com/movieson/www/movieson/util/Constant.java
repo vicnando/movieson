@@ -1,5 +1,7 @@
 package com.movieson.www.movieson.util;
 
+import java.net.URL;
+
 /**
  * Created by microsoft on 5/22/2017.
  */
@@ -31,8 +33,14 @@ public class Constant {
     private String MOVIE_TOPRATE_URL;
     private String MOVIE_COMINGSOON_URL;
 
+    String REVIEW_URL;
+
     String SEARCH_URL =URL_BASE + URL_SEARCH + URL_API_KEY;
 
+    public String getREVIEW_URL(String movieID){
+        this.REVIEW_URL = URL_BASE + URL_SEARCH_ID + movieID + "/reviews?" + URL_API_KEY;
+    return this.REVIEW_URL;
+    }
     public String getMOVIE_POPULAR_URL() {
         this.MOVIE_POPULAR_URL = URL_BASE + URL_SEARCH_ID + URL_POPULAR + URL_API_KEY + URL_PAGE;
         return MOVIE_POPULAR_URL;
